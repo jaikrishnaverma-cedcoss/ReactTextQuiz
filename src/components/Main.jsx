@@ -102,12 +102,15 @@ class Main extends Component {
                         </div>
                         <div className="col bgWhite card" style={{marginBottom:"20px"}}>
                         <div className="row flexAIC flexSB w100">
+                            {
+                                this.props.paper.map((x,i)=>{ return  <div className={(i===this.state.current)?"square btn-danger row flexJCC flexAIC":"square row flexJCC flexAIC bgr"} >{i+1}</div>})
+                            }
+                         
+                            {/* <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div>
                             <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div>
                             <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div>
                             <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div>
-                            <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div>
-                            <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div>
-                            <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div>
+                            <div className="square btn-danger" style={{ backgroundColor: "#bababa" }}></div> */}
                         </div>
                                
                         </div>

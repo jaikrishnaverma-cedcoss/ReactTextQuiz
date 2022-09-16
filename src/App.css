@@ -4,4 +4,8 @@
 .square{
   height: 50px;
   width: 50px;
+  /* background-color: #bababa; */
+}
+.bgr{
+  background-color: #bababa;
 }
