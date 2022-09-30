@@ -1,45 +1,20 @@
 import './BaseUI.css';
 import './App.css';
-import Main from './components/Main';
-
+import Main2 from './components/Main2';
+import Timer from './components/Timer';
+import { useRef } from 'react';
 function App() {
+  const keys = useRef();
 
-  const quiz=[
-    {
-      question:"Why the color of blood is RED?",
-    options:["Himnoglobin","Clorofil","Acid Property","None of these","Base property"],
-    answer:0
-  },
-  {
-    question:"Who is the Founder of Nucleus?",
-  options:["Robert Hook","Chandwik","Einstine","None of these","Thomson"],
-  answer:1
- },
- {
-  question:"Who is the Founder of Proton?",
-options:["Robert Hook","Chandwik","Rutherford","None of these","Thomson"],
-answer:2
-},
-{
-  question:"Who is the Founder of Electron?",
-options:["Robert Hook","Chandwik","Einstine","None of these","Thomson"],
-answer:4
-},
-{
-  question:"Who is the Founder of Cells?",
-options:["Robert Hook","Chandwik","Einstine","None of these","Thomson"],
-answer:0
-},
-{
-  question:"Who Descoverd Electric Bulb?",
-options:["Robert Hook","T. A. Adission","Einstine","None of these","Thomson"],
-answer:1
-}
-  ]
+  const changer=()=>{
+    console.log(keys.current.style.display="none")
+  }
   return (
 
-    <div className="App" style={{backgroundColor:"#dbdbdb"}}>
-     <Main paper={quiz}/>
+    <div className="App " style={{backgroundColor:"#dbdbdb"}}>
+   <div className='row flexAIC  w100 flexEnd btn-trans'  style={{height:"13px",border:"2px solid white",borderRadius:"20px"}}><div className='row flexAIC  w100 flexEnd btn-trans' style={{height:"13px",width:"100%",borderRadius:"20px"}} ref={keys} ><Timer /></div> </div>
+                
+     <Main2 changer={changer}/>
     </div>
   );
 }
